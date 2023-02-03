@@ -5,16 +5,16 @@ public class Player {
 
     // CONSTRUCTOR
     public Player() {
-        this.number ++;
-        this.playerNum = this.number;
+        Player.number++;
+        this.playerNum = Player.number;
     }
 
     // GAME METHODS
-    public boolean writeTable (int row, int col) {
-        if (Main.table[row-1][col-1] != 0) {
+    public boolean writeTable(int row, int col) {
+        if (Main.table[row - 1][col - 1] != 0) {
             return false;
         }
-        Main.table[row-1][col-1] = this.playerNum;
+        Main.table[row - 1][col - 1] = this.playerNum;
         return true;
     }
 
