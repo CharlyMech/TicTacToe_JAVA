@@ -65,6 +65,7 @@ public class Main {
 
         turnos++;
         if (turnos == 9) {
+            turnos = 0;
             clearTable();
         }
         return false;
@@ -87,6 +88,7 @@ public class Main {
         if (turnos < 9) {
             randomChoice = freeSpacesIndexes[(int) (Math.random() * (freeSpacesIndexes.length))];
         } else {
+            turnos = 0;
             clearTable();
             displayTable();
         }
@@ -323,6 +325,8 @@ public class Main {
                 int finalChoice = s.nextInt();
                 switch (finalChoice) {
                     case 1:
+                        clearTable();
+                        turnos = 0;
                         restartFlag = false;
                         break;
                     case 2:
